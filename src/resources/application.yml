@@ -1,0 +1,38 @@
+server:
+  port: 8081
+spring:
+  datasource:
+    name: spds
+    continue-on-error: false
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:postgresql://localhost/database?currentSchema=public&createDatabaseIfNotExist=true
+    driverClassName: org.postgresql.Driver
+    username: user
+    password: *******
+
+
+  jpa:
+    show-sql: false
+    database: postgresql
+    open-in-view: false
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate.jdbc.batch_size: 100
+
+axon:
+  axonserver:
+    servers: localhost:8124
+  serializer:
+    general: jackson
+    messages: jackson
+    events: jackson
+
+token-store:
+  jdbc:
+    enable: false
+logging:
+  level:
+    org.axonframework.messaging.interceptors: ERROR 
