@@ -1,3 +1,6 @@
+/*
+ * B
+ */
 package com.axon.handler;
 
 import com.axon.event.TestEvent;
