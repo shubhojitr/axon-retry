@@ -1,3 +1,6 @@
+/*
+ * B
+ */
 package com.axon;
 
 import org.springframework.boot.SpringApplication;
